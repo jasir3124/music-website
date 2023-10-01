@@ -1,3 +1,8 @@
-
+.collectionsCont {
+  grid-template-columns: 33% 33% 33%;
+}
+.collectionsCont .collection {
+  background-color: #2b292e;
+}
 
 /*# sourceMappingURL=SassOutput.css.map */
