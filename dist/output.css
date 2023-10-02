@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.float-right {
+  float: right;
+}
+
 .m-5 {
   margin: 1.25rem;
 }
@@ -548,6 +552,11 @@ video {
           margin-inline-start: 1.25rem;
 }
 
+.me-10 {
+  -webkit-margin-end: 2.5rem;
+          margin-inline-end: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -558,6 +567,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .truncate {
@@ -577,11 +590,6 @@ video {
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl {

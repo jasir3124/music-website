@@ -3,8 +3,10 @@ let welcomeText = document.querySelector('.helloText')
 let hour = new Date().getHours()
 if(hour >= 0 && hour < 12){
     welcomeText.innerHTML = 'Good Morning'
-} else {
+} else if (hour >= 12 && hour < 20) {
     welcomeText.innerHTML = 'Good Afternoon'
+} else {
+    welcomeText.innerHTML = 'Good Evening'
 }
 
 let collectionCardsInfo = [
