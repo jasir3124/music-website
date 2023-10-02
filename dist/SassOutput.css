@@ -4,5 +4,9 @@
 .collectionsCont .collection {
   background-color: #2b292e;
 }
+.collectionsCont .collection .collectionImage {
+  width: 95px;
+  height: 95px;
+}
 
 /*# sourceMappingURL=SassOutput.css.map */

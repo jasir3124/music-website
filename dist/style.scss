@@ -2,5 +2,9 @@
     grid-template-columns: 33% 33% 33%;
   .collection {
     background-color: #2b292e;
+    .collectionImage{
+      width: 95px;
+      height: 95px;
+    }
   }
 }
