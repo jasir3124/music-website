@@ -10,16 +10,49 @@
   </head>
   <body class="bg-black p-10">
     <div>
-      <div class="flex justify-between">
-        <h1 class="helloText text-white font-bold text-3xl ms-5"></h1>
-        <i class="fa-brands fa-spotify fa-2x me-10" style="color: #1ed760"></i>
+      <div class="albums p-5 rounded-md">
+        <div class="flex justify-between">
+          <h1 class="helloText text-white font-bold text-3xl ms-5"></h1>
+          <i
+            class="fa-brands fa-spotify fa-2x me-10"
+            style="color: #1ed760"
+          ></i>
+        </div>
+        <div class="collectionsCont grid">
+          <!-- the cards are created and loaded with JS -->
+        </div>
       </div>
-      <div class="collectionsCont grid">
-        <!-- the cards are created and loaded with JS -->
-      </div>
-      <div class="songsCont text-white">
-        <h1 class="text-white font-bold text-3xl ms-5">Recommended songs</h1>
-        <div class="songs"></div>
+      <div class="songsCont text-white mt-10 rounded-md p-5">
+        <h1 class="text-white font-bold text-3xl ms-5 mb-5">
+          Recommended songs
+        </h1>
+        <div class="songsInfo grid w-full items-center mb-3">
+          <div class="flex items-center">
+            <p class="ps-3">#</p>
+            <p class="ps-28">Title</p>
+          </div>
+          <p class="justify-self-center">Album</p>
+          <p class="justify-self-end pe-3">Time</p>
+        </div>
+        <hr />
+        <div class="songs mt-10">
+          <div class="song grid w-full items-center hover:bg-zinc-800 p-3 rounded-md">
+            <div class="whitespace-nowrap flex items-center gap-5">
+              <p class="text-xl text-gray-400">1</p>
+              <img
+                src="../images/6AM album cover.png"
+                alt=""
+                style="height: 65px; width: 65px"
+              />
+              <div>
+                <p class="font-semibold">sing about me im dying of thirst</p>
+                <p class="text-gray-400">kendrick Lamar</p>
+              </div>
+            </div>
+            <p class="justify-self-center ps-4">kendrick lamar</p>
+            <p class="justify-self-end">2:33</p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>

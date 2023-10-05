@@ -9,4 +9,18 @@
   height: 95px;
 }
 
+.albums {
+  background-color: #121212;
+}
+
+.songsCont {
+  background-color: #121212;
+}
+.songsCont .songsInfo {
+  grid-template-columns: 33% 33% 33%;
+}
+.songsCont .song {
+  grid-template-columns: 33% 33% 33%;
+}
+
 /*# sourceMappingURL=SassOutput.css.map */
