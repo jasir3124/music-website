@@ -18,5 +18,13 @@
   }
   .song{
     grid-template-columns: 33% 33% 33%;
+    .songNumbercont{
+      .songNumber{
+        margin-right: 1px;
+      }
+      .songPlayBtn{
+        display: none;
+      }
+    }
   }
 }

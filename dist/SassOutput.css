@@ -22,5 +22,11 @@
 .songsCont .song {
   grid-template-columns: 33% 33% 33%;
 }
+.songsCont .song .songNumbercont .songNumber {
+  margin-right: 1px;
+}
+.songsCont .song .songNumbercont .songPlayBtn {
+  display: none;
+}
 
 /*# sourceMappingURL=SassOutput.css.map */

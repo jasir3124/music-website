@@ -72,27 +72,145 @@ function createCollectionCard(image, text, src) {
   return collectionCardCont;
 }
 
+let songsArray = [
+  {
+    name: "Bitch dont kill my vibe",
+    creator: "Kendrick Lamar",
+    albumName: "good kid maad ccity",
+    albumCover: "../images/good kid maad city album cover.png",
+    timeLength: "5:10",
+    inedex: "1",
+  },
+  {
+    name: "Me and Your Mama",
+    creator: "Childish Gambino",
+    albumName: '"Awaken, My Love"',
+    albumCover: "../images/aweken my love album cover.png",
+    timeLength: "6:19",
+    inedex: "2",
+  },
+  {
+    name: "Pink + White",
+    creator: "Frank Ocean",
+    albumName: 'Blonde',
+    albumCover: "../images/blond album cover.png",
+    timeLength: "6:19",
+    inedex: "3",
+  },
+  {
+    name: "Homecoming",
+    creator: "Kanye West",
+    albumName: 'Graduation',
+    albumCover: "../images/graduation album cover.png",
+    timeLength: "3:23",
+    inedex: "4",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumName: '6AM',
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "1:57",
+    inedex: "5",
+  },
+];
+
+songsArray.forEach((song) => {
+  createSongCard(
+    song.name,
+    song.creator,
+    song.albumName,
+    song.albumCover,
+    song.timeLength,
+    song.inedex
+  );
+});
+
+function createSongCard(name, creator, albumName1, albumCover, time, index) {
+  let songsCont = document.querySelector(".songs");
+
+  let songCard = document.createElement("div");
+  songCard.classList.add(
+    "song",
+    "grid",
+    "w-full",
+    "items-center",
+    "hover:bg-zinc-800",
+    "p-3",
+    "rounded-md"
+  );
+
+  let songAlbumCoverCont = document.createElement("div");
+  songAlbumCoverCont.classList.add(
+    "whitespace-nowrap",
+    "flex",
+    "items-center",
+    "gap-5"
+  );
+
+  let songNumberCont = document.createElement("div");
+  songNumberCont.classList.add("songNumbercont");
+
+  let songNumber = document.createElement("p");
+  songNumber.classList.add("text-xl", "text-gray-400", "songNumber");
+  songNumber.innerHTML = index;
+
+  let playIcon = document.createElement("i");
+  playIcon.classList.add("fa-solid", "fa-play", "songPlayBtn");
+  playIcon.style.color = "white";
+
+  let albumCoverPhoto = document.createElement("img");
+  albumCoverPhoto.src = albumCover;
+  albumCoverPhoto.alt = "albumCoverPhoto";
+  albumCoverPhoto.style.height = "65px";
+  albumCoverPhoto.style.width = "65px";
+
+  let albumCoverMoreInfo = document.createElement("div");
+  let songName = document.createElement("p");
+  songName.classList.add("font-semibold");
+  songName.innerHTML = name;
+  let creatorName = document.createElement("p");
+  creatorName.classList.add("text-gray-400");
+  creatorName.innerHTML = creator;
+
+  let albumName = document.createElement("p");
+  albumName.classList.add("justify-self-center", "ps-4");
+  albumName.innerHTML = albumName1;
+  let timeLength = document.createElement("p");
+  timeLength.classList.add("justify-self-end");
+  timeLength.innerHTML = time;
+
+  albumCoverMoreInfo.appendChild(songName),
+    albumCoverMoreInfo.appendChild(creatorName),
+    songNumberCont.appendChild(songNumber);
+  songNumberCont.appendChild(playIcon);
+  songAlbumCoverCont.appendChild(songNumberCont);
+  songAlbumCoverCont.appendChild(albumCoverPhoto);
+  songAlbumCoverCont.appendChild(albumCoverMoreInfo);
+  songCard.appendChild(songAlbumCoverCont);
+  songCard.appendChild(albumName);
+  songCard.appendChild(timeLength);
+  songsCont.appendChild(songCard);
+}
+
 function changeSongNumToPlayBtn() {
   let songCard = document.querySelectorAll(".song");
 
   songCard.forEach((song) => {
-    let songNumberCont = song.querySelector('.songNumbercont')
+    let songNumberCont = song.querySelector(".songNumbercont");
 
     let songNum = song.querySelector(".songNumber");
-    console.log(songNum);
 
-    let playIcon = document.createElement("i");
-    playIcon.classList.add("fa-solid", "fa-play");
-    playIcon.style.color = "white";
+    let playIcon = song.querySelector(".songPlayBtn");
 
     song.addEventListener("mouseover", function () {
-        songNum.style.display = "none";
-        songNumberCont.appendChild(playIcon)
+      songNum.style.display = "none";
+      playIcon.style.display = "block";
     });
 
     song.addEventListener("mouseout", function () {
-        songNum.style.display = "block"
-        songNumberCont.lastChild.remove()
+      songNum.style.display = "block";
+      playIcon.style.display = "none";
     });
   });
 }
