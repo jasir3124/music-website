@@ -113,6 +113,22 @@ let songsArray = [
     timeLength: "1:57",
     inedex: "5",
   },
+  {
+    name: "Father Stretch My Hands Pt. 1",
+    creator: "Kanye West",
+    albumName: 'The Life Of Pablo',
+    albumCover: "../images/the life of pablo album cover.png",
+    timeLength: "2:15",
+    inedex: "6",
+  },
+  {
+    name: "Mary",
+    creator: "Alex G",
+    albumName: 'Trick',
+    albumCover: "../images/trick album cover.png",
+    timeLength: "3:17",
+    inedex: "7",
+  },
 ];
 
 songsArray.forEach((song) => {
