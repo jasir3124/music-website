@@ -72,64 +72,9 @@ function createCollectionCard(image, text, src) {
   return collectionCardCont;
 }
 
-let songsArray = [
-  {
-    name: "Bitch dont kill my vibe",
-    creator: "Kendrick Lamar",
-    albumName: "good kid maad ccity",
-    albumCover: "../images/good kid maad city album cover.png",
-    timeLength: "5:10",
-    inedex: "1",
-  },
-  {
-    name: "Me and Your Mama",
-    creator: "Childish Gambino",
-    albumName: '"Awaken, My Love"',
-    albumCover: "../images/aweken my love album cover.png",
-    timeLength: "6:19",
-    inedex: "2",
-  },
-  {
-    name: "Pink + White",
-    creator: "Frank Ocean",
-    albumName: 'Blonde',
-    albumCover: "../images/blond album cover.png",
-    timeLength: "6:19",
-    inedex: "3",
-  },
-  {
-    name: "Homecoming",
-    creator: "Kanye West",
-    albumName: 'Graduation',
-    albumCover: "../images/graduation album cover.png",
-    timeLength: "3:23",
-    inedex: "4",
-  },
-  {
-    name: "2z Don Corleon",
-    creator: "Lil 2z",
-    albumName: '6AM',
-    albumCover: "../images/6AM album cover.png",
-    timeLength: "1:57",
-    inedex: "5",
-  },
-  {
-    name: "Father Stretch My Hands Pt. 1",
-    creator: "Kanye West",
-    albumName: 'The Life Of Pablo',
-    albumCover: "../images/the life of pablo album cover.png",
-    timeLength: "2:15",
-    inedex: "6",
-  },
-  {
-    name: "Mary",
-    creator: "Alex G",
-    albumName: 'Trick',
-    albumCover: "../images/trick album cover.png",
-    timeLength: "3:17",
-    inedex: "7",
-  },
-];
+
+// creates songs
+import songsArray from "../components/songs.js";
 
 songsArray.forEach((song) => {
   createSongCard(
@@ -230,5 +175,4 @@ function changeSongNumToPlayBtn() {
     });
   });
 }
-
 changeSongNumToPlayBtn();
