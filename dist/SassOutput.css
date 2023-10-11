@@ -28,5 +28,8 @@
 .songsCont .song .songNumbercont .songPlayBtn {
   display: none;
 }
+.songsCont .song .saveIcon {
+  display: none;
+}
 
 /*# sourceMappingURL=SassOutput.css.map */
