@@ -55,6 +55,14 @@ let songsArray = [
       timeLength: "3:17",
       inedex: "7",
     },
+    {
+      name: "Trance(with Travis Scott & Young Thug)",
+      creator: "Metro Boomin, Travis Scott, Young Thug",
+      albumName: 'HEROES & VILLAINS',
+      albumCover: "../images/heroes and villains album cover.png",
+      timeLength: "3:14",
+      inedex: "8",
+    },
   ];
 
   export default songsArray
