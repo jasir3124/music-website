@@ -139,10 +139,14 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
 
   // this is appended to the songAlbumCoverCont
   let albumCoverMoreInfo = document.createElement("div");
+
+
   // this is appended to the albumCoverMoreInfo
   let songName = document.createElement("p");
   songName.classList.add("font-semibold");
   songName.innerHTML = name;
+
+
   // this is appended to the albumCoverMoreInfo
   let creatorName = document.createElement("p");
   creatorName.classList.add("text-gray-400");
@@ -165,7 +169,8 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
     "pe-10",
     "saveIcon"
   );
-  saveIcon.style.color = "white";
+
+
   // this is appende to the timeAndSaveIconCont
   let timeLength = document.createElement("p");
   timeLength.innerHTML = time;
@@ -196,6 +201,7 @@ function changeSongNumToPlayBtnAndShowSaveBtn() {
 
     let saveIcon = song.querySelector(".saveIcon");
 
+
     song.addEventListener("mouseover", function () {
       songNum.style.display = "none";
       playIcon.style.display = "block";
@@ -210,3 +216,16 @@ function changeSongNumToPlayBtnAndShowSaveBtn() {
   });
 }
 changeSongNumToPlayBtnAndShowSaveBtn();
+
+// change saveIcon to active and save song
+function saveSong() {
+  let saveIcon = document.querySelectorAll('.saveIcon')
+  console.log(saveIcon);
+  saveIcon.forEach(icon => {
+    icon.addEventListener("click", () => {
+      icon.classList.toggle('saveIconActive')
+      icon.classList.toggle('fa-solid')
+    })
+  });
+}
+saveSong()
