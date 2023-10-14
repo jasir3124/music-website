@@ -13,20 +13,23 @@
 }
 .songsCont {
   background-color: #121212;
-  .songsInfo{
+  .songsInfo {
     grid-template-columns: 33% 33% 33%;
   }
-  .song{
+  .song {
     grid-template-columns: 33% 33% 33%;
-    .songNumbercont{
-      .songNumber{
-        margin-right: 1px;
+    .songNumbercont {
+      position: relative;
+      left: -6px;
+      margin-left: 10px;
+      .songNumber {
+        margin-right: 1.3px;
       }
-      .songPlayBtn{
+      .songPlayBtn {
         display: none;
       }
     }
-    .saveIcon{
+    .saveIcon {
       display: none;
     }
   }

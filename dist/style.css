@@ -22,19 +22,13 @@
 .songsCont .song {
   grid-template-columns: 33% 33% 33%;
 }
-.songsCont .song .songNumbercont {
-  position: relative;
-  left: -6px;
-  margin-left: 10px;
-}
 .songsCont .song .songNumbercont .songNumber {
-  margin-right: 1.3px;
+  margin-right: 1px;
+  position: relative;
 }
 .songsCont .song .songNumbercont .songPlayBtn {
   display: none;
 }
 .songsCont .song .saveIcon {
   display: none;
-}
-
-/*# sourceMappingURL=SassOutput.css.map */
+}/*# sourceMappingURL=style.css.map */

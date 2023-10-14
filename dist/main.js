@@ -114,6 +114,7 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   // this conaitns the song number thats on the left side of the album photo and it is appended to the songAlbumCoverCont
   let songNumberCont = document.createElement("div");
   songNumberCont.classList.add("songNumbercont");
+
   let songNumber = document.createElement("p");
   songNumber.classList.add("text-xl", "text-gray-400", "songNumber");
   songNumber.innerHTML = index;
@@ -122,6 +123,9 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   let playIcon = document.createElement("i");
   playIcon.classList.add("fa-solid", "fa-play", "songPlayBtn");
   playIcon.style.color = "white";
+  if (index > 9) {
+    playIcon.style.marginRight = "11px";
+  }
 
   // this is appended to the songAlbumCoverCont
   let albumCoverPhoto = document.createElement("img");
@@ -129,6 +133,9 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   albumCoverPhoto.alt = "albumCoverPhoto";
   albumCoverPhoto.style.height = "65px";
   albumCoverPhoto.style.width = "65px";
+  if (index > 9) {
+    albumCoverPhoto.style.marginLeft = "-10px";
+  }
 
   // this is appended to the songAlbumCoverCont
   let albumCoverMoreInfo = document.createElement("div");
@@ -151,7 +158,13 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   timeAndSaveIconCont.classList.add("justify-self-end", "flex");
   // this is appende to the timeAndSaveIconCont
   let saveIcon = document.createElement("i");
-  saveIcon.classList.add("fa-regular", "fa-heart", "pt-1.5", "pe-10", 'saveIcon');
+  saveIcon.classList.add(
+    "fa-regular",
+    "fa-heart",
+    "pt-1.5",
+    "pe-10",
+    "saveIcon"
+  );
   saveIcon.style.color = "white";
   // this is appende to the timeAndSaveIconCont
   let timeLength = document.createElement("p");
@@ -160,8 +173,8 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   timeAndSaveIconCont.appendChild(saveIcon);
   timeAndSaveIconCont.appendChild(timeLength);
   albumCoverMoreInfo.appendChild(songName),
-  albumCoverMoreInfo.appendChild(creatorName),
-  songNumberCont.appendChild(songNumber);
+    albumCoverMoreInfo.appendChild(creatorName),
+    songNumberCont.appendChild(songNumber);
   songNumberCont.appendChild(playIcon);
   songAlbumCoverCont.appendChild(songNumberCont);
   songAlbumCoverCont.appendChild(albumCoverPhoto);
@@ -187,7 +200,6 @@ function changeSongNumToPlayBtnAndShowSaveBtn() {
       songNum.style.display = "none";
       playIcon.style.display = "block";
       saveIcon.style.display = "block";
-
     });
 
     song.addEventListener("mouseout", function () {
