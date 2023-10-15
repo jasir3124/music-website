@@ -140,12 +140,10 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   // this is appended to the songAlbumCoverCont
   let albumCoverMoreInfo = document.createElement("div");
 
-
   // this is appended to the albumCoverMoreInfo
   let songName = document.createElement("p");
   songName.classList.add("font-semibold");
   songName.innerHTML = name;
-
 
   // this is appended to the albumCoverMoreInfo
   let creatorName = document.createElement("p");
@@ -170,7 +168,6 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
     "saveIcon"
   );
 
-
   // this is appende to the timeAndSaveIconCont
   let timeLength = document.createElement("p");
   timeLength.innerHTML = time;
@@ -190,7 +187,7 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   songsCont.appendChild(songCard);
 }
 
-function changeSongNumToPlayBtnAndShowSaveBtn() {
+function indexNumToPlayBtn() {
   let songCard = document.querySelectorAll(".song");
   songCard.forEach((song) => {
     // let songNumberCont = song.querySelector(".songNumbercont");
@@ -200,7 +197,6 @@ function changeSongNumToPlayBtnAndShowSaveBtn() {
     let playIcon = song.querySelector(".songPlayBtn");
 
     let saveIcon = song.querySelector(".saveIcon");
-
 
     song.addEventListener("mouseover", function () {
       songNum.style.display = "none";
@@ -215,17 +211,41 @@ function changeSongNumToPlayBtnAndShowSaveBtn() {
     });
   });
 }
-changeSongNumToPlayBtnAndShowSaveBtn();
+indexNumToPlayBtn();
+
+let savedSongsArrays = [];
 
 // change saveIcon to active and save song
 function saveSong() {
-  let saveIcon = document.querySelectorAll('.saveIcon')
-  console.log(saveIcon);
-  saveIcon.forEach(icon => {
+  let saveIcon = document.querySelectorAll(".saveIcon");
+  let testObj = {
+    name: "",
+    creator: "",
+    albumName: "",
+    albumCover: "",
+    timeLength: "",
+  };
+  saveIcon.forEach((icon) => {
     icon.addEventListener("click", () => {
-      icon.classList.toggle('saveIconActive')
-      icon.classList.toggle('fa-solid')
-    })
+      icon.classList.toggle("saveIconActive");
+      icon.classList.toggle("fa-solid");
+      icon.classList.toggle("dispalyBlockImportant");
+      let song = icon.parentElement.parentElement;
+      let songAuthor = song.firstChild.lastChild.lastChild.textContent;
+      let songTitle = song.firstChild.lastChild.firstChild.textContent;
+      let songAlbumTitle = song.children[1].textContent
+      let songImg = song.firstChild.children[1].getAttribute("src");
+      let songTimeLength = song.lastChild.lastChild.textContent
+
+      testObj.name = songTitle;
+      testObj.creator = songAuthor;
+      testObj.albumName = songAlbumTitle
+      testObj.albumCover = songImg;
+      testObj.timeLength = songTimeLength
+
+      savedSongsArrays.push(Object.assign({}, testObj));
+      console.log(savedSongsArrays);
+    });
   });
 }
-saveSong()
+saveSong();

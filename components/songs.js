@@ -2,7 +2,7 @@ let songsArray = [
   {
     name: "Bitch dont kill my vibe",
     creator: "Kendrick Lamar",
-    albumName: "good kid maad ccity",
+    albumName: "good kid maad city",
     albumCover: "../images/good kid maad city album cover.png",
     timeLength: "5:10",
     inedex: "1",
