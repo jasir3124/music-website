@@ -214,9 +214,14 @@ function indexNumToPlayBtn() {
 indexNumToPlayBtn();
 
 let savedSongsArrays = [];
+console.log(savedSongsArrays);
 
 // change saveIcon to active and save song
 function saveSong() {
+  let storage = JSON.parse(localStorage.getItem("songs"));
+  if (storage) {
+    savedSongsArrays.push(...storage);
+  }
   let saveIcon = document.querySelectorAll(".saveIcon");
   let testObj = {
     name: "",
@@ -233,19 +238,43 @@ function saveSong() {
       let song = icon.parentElement.parentElement;
       let songAuthor = song.firstChild.lastChild.lastChild.textContent;
       let songTitle = song.firstChild.lastChild.firstChild.textContent;
-      let songAlbumTitle = song.children[1].textContent
+      let songAlbumTitle = song.children[1].textContent;
       let songImg = song.firstChild.children[1].getAttribute("src");
-      let songTimeLength = song.lastChild.lastChild.textContent
-
+      let songTimeLength = song.lastChild.lastChild.textContent;
       testObj.name = songTitle;
       testObj.creator = songAuthor;
-      testObj.albumName = songAlbumTitle
+      testObj.albumName = songAlbumTitle;
       testObj.albumCover = songImg;
-      testObj.timeLength = songTimeLength
-
+      testObj.timeLength = songTimeLength;
       savedSongsArrays.push(Object.assign({}, testObj));
-      console.log(savedSongsArrays);
+      localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
     });
   });
 }
 saveSong();
+// localStorage.clear()
+
+window.addEventListener("load", function () {
+  let storage = JSON.parse(localStorage.getItem("songs"));
+  let songsArray = [];
+  if (storage) {
+    songsArray.push(...storage);
+    console.log(songsArray);
+  }
+
+  let saveIcon = document.querySelectorAll(".saveIcon");
+  saveIcon.forEach((icon) => {
+    let song = icon.parentElement.parentElement;
+    let songImg = song.firstChild.children[1].getAttribute("src");
+    console.log(songImg);
+    for (let i = 0; i < songsArray.length; i++) {
+      if (songImg === songsArray[i].albumCover) {
+        icon.classList.add(
+          "saveIconActive",
+          "displayBlockImportant",
+          "fa-solid"
+        );
+      }
+    }
+  });
+});
