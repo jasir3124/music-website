@@ -250,14 +250,13 @@ saveIcon.forEach((icon) => {
       testObj.timeLength = songTimeLength;
       savedSongsArrays.push(Object.assign({}, testObj));
       localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
-      console.log(savedSongsArrays)
-    }
-    else{
+      console.log(savedSongsArrays);
+    } else {
       icon.classList.remove("saveIconActive", "fa-solid");
       let song = icon.parentElement.parentElement;
       let songName = song.firstChild.lastChild.firstChild.textContent;
-      for(let i = 0; i < savedSongsArrays.length; i++) {
-        if(savedSongsArrays[i].name === songName){
+      for (let i = 0; i < savedSongsArrays.length; i++) {
+        if (savedSongsArrays[i].name === songName) {
           savedSongsArrays.splice(i, 1);
           savedSongsArrays.push();
           localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
