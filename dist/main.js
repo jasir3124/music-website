@@ -187,33 +187,32 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   songsCont.appendChild(songCard);
 }
 
-  let songCard = document.querySelectorAll(".song");
-  songCard.forEach((song) => {
-    // let songNumberCont = song.querySelector(".songNumbercont");
+let songCard = document.querySelectorAll(".song");
+songCard.forEach((song) => {
+  // let songNumberCont = song.querySelector(".songNumbercont");
 
-    let songNum = song.querySelector(".songNumber");
+  let songNum = song.querySelector(".songNumber");
 
-    let playIcon = song.querySelector(".songPlayBtn");
+  let playIcon = song.querySelector(".songPlayBtn");
 
-    let saveIcon = song.querySelector(".saveIcon");
+  let saveIcon = song.querySelector(".saveIcon");
 
-    song.addEventListener("mouseover", function () {
-      songNum.style.display = "none";
-      playIcon.style.display = "block";
-      saveIcon.style.display = "block";
-    });
-
-    song.addEventListener("mouseout", function () {
-      songNum.style.display = "block";
-      playIcon.style.display = "none";
-      if(saveIcon.classList.contains('saveIconActive')){
-        return
-      } else {
-        saveIcon.style.display = "none";
-      }
-    });
+  song.addEventListener("mouseover", function () {
+    songNum.style.display = "none";
+    playIcon.style.display = "block";
+    saveIcon.style.display = "block";
   });
 
+  song.addEventListener("mouseout", function () {
+    songNum.style.display = "block";
+    playIcon.style.display = "none";
+    if (saveIcon.classList.contains("saveIconActive")) {
+      return;
+    } else {
+      saveIcon.style.display = "none";
+    }
+  });
+});
 
 let savedSongsArrays = [];
 console.log(savedSongsArrays);
@@ -234,11 +233,10 @@ let testObj = {
 // change saveIcon to active and save song
 saveIcon.forEach((icon) => {
   icon.addEventListener("click", () => {
-    if (!icon.classList.contains('saveIconActive')) {
-      console.log('true')
+    if (!icon.classList.contains("saveIconActive")) {
+      console.log("true");
       icon.classList.toggle("saveIconActive");
       icon.classList.toggle("fa-solid");
-      icon.style.display = "block !important";
       let song = icon.parentElement.parentElement;
       let songAuthor = song.firstChild.lastChild.lastChild.textContent;
       let songTitle = song.firstChild.lastChild.firstChild.textContent;
@@ -252,10 +250,22 @@ saveIcon.forEach((icon) => {
       testObj.timeLength = songTimeLength;
       savedSongsArrays.push(Object.assign({}, testObj));
       localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
+      console.log(savedSongsArrays)
+    }
+    else{
+      icon.classList.remove("saveIconActive", "fa-solid");
+      let song = icon.parentElement.parentElement;
+      let songName = song.firstChild.lastChild.firstChild.textContent;
+      for(let i = 0; i < savedSongsArrays.length; i++) {
+        if(savedSongsArrays[i].name === songName){
+          savedSongsArrays.splice(i, 1);
+          savedSongsArrays.push();
+          localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
+        }
+      }
     }
   });
 });
-
 // localStorage.clear()
 
 window.addEventListener("load", function () {
@@ -272,10 +282,7 @@ window.addEventListener("load", function () {
     let songImg = song.firstChild.children[1].getAttribute("src");
     for (let i = 0; i < songsArray.length; i++) {
       if (songImg === songsArray[i].albumCover) {
-        icon.classList.add(
-          "saveIconActive",
-          "fa-solid"
-        );
+        icon.classList.add("saveIconActive", "fa-solid");
         icon.style.display = "block";
       }
     }
