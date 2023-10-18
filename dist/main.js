@@ -13,7 +13,7 @@ let collectionCardsInfo = [
   {
     image: "../images/liked Icon image.png",
     text: "Liked Songs",
-    href: "#",
+    href: "likedSongs.html",
   },
   {
     image: "../images/6AM album cover.png",
