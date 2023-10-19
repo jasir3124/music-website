@@ -1,0 +1,41 @@
+.collectionsCont {
+    grid-template-columns: 33% 33% 33%;
+    .collection {
+      background-color: #2b292e;
+      .collectionImage {
+        width: 95px;
+        height: 95px;
+      }
+    }
+  }
+  .albums {
+    background-color: #121212;
+  }
+  .songsCont {
+    background-color: #121212;
+    .songsInfo {
+      grid-template-columns: 33% 33% 33%;
+    }
+    .song {
+      grid-template-columns: 33% 33% 33%;
+      .songNumbercont {
+        position: relative;
+        left: -6px;
+        margin-left: 10px;
+        .songNumber {
+          margin-right: 1.3px;
+        }
+        .songPlayBtn {
+          display: none;
+        }
+      }
+      .saveIcon {
+        display: none;
+        color: white;
+      }
+      .saveIconActive{
+        color: #1ED760;
+        display:  block !important;
+      }
+    }
+  }

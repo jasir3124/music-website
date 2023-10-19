@@ -1,41 +1,16 @@
-.collectionsCont {
-  grid-template-columns: 33% 33% 33%;
-  .collection {
-    background-color: #2b292e;
-    .collectionImage {
-      width: 95px;
-      height: 95px;
-    }
+@import "../styles/mainpage.scss";
+
+.navBar {
+  div{
+    width: fit-content;
+    background-color: #121212;
   }
-}
-.albums {
-  background-color: #121212;
-}
-.songsCont {
-  background-color: #121212;
-  .songsInfo {
-    grid-template-columns: 33% 33% 33%;
-  }
-  .song {
-    grid-template-columns: 33% 33% 33%;
-    .songNumbercont {
-      position: relative;
-      left: -6px;
-      margin-left: 10px;
-      .songNumber {
-        margin-right: 1.3px;
-      }
-      .songPlayBtn {
-        display: none;
-      }
-    }
-    .saveIcon {
-      display: none;
-      color: white;
-    }
-    .saveIconActive{
-      color: #1ED760;
-      display:  block !important;
+  .secondNavDiv{
+    padding: 7px;
+    padding-top: 1px;
+    margin-top: 15px;
+    img{
+      margin-top: 15px;
     }
   }
 }

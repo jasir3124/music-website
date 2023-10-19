@@ -39,10 +39,20 @@
 }
 .songsCont .song .saveIconActive {
   color: #1ED760;
+  display: block !important;
 }
 
-.dispalyBlockImportant {
-  display: block !important;
+.navBar div {
+  width: fit-content;
+  background-color: #121212;
+}
+.navBar .secondNavDiv {
+  padding: 7px;
+  padding-top: 1px;
+  margin-top: 15px;
+}
+.navBar .secondNavDiv img {
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=SassOutput.css.map */
