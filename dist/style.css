@@ -11,6 +11,7 @@
 
 .albums {
   background-color: #121212;
+  color: white;
 }
 
 .songsCont {
@@ -22,13 +23,43 @@
 .songsCont .song {
   grid-template-columns: 33% 33% 33%;
 }
-.songsCont .song .songNumbercont .songNumber {
-  margin-right: 1px;
+.songsCont .song .songNumbercont {
   position: relative;
+  left: -6px;
+  margin-left: 10px;
+}
+.songsCont .song .songNumbercont .songNumber {
+  margin-right: 1.3px;
 }
 .songsCont .song .songNumbercont .songPlayBtn {
   display: none;
 }
 .songsCont .song .saveIcon {
   display: none;
+  color: white;
+}
+.songsCont .song .saveIconActive {
+  color: #1ED760;
+  display: block !important;
+}
+
+.navBar div {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #121212;
+}
+.navBar div a i {
+  font-size: 25px;
+}
+.navBar .secondNavDiv {
+  padding: 7px;
+  padding-top: 1px;
+  margin-top: 15px;
+}
+.navBar .secondNavDiv img {
+  margin-top: 15px;
+}
+
+.songsCont {
+  margin-left: 10px;
 }/*# sourceMappingURL=style.css.map */

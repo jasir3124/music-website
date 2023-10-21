@@ -227,7 +227,7 @@ let testObj = {
   creator: "",
   albumName: "",
   albumCover: "",
-  timeLength: "",
+  timeLength: ""
 };
 
 // change saveIcon to active and save song

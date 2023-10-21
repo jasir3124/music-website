@@ -10,38 +10,60 @@
   </head>
   <body class="bg-black p-5">
     <!-- sidebar -->
-    <nav class="navBar">
-      <div class="p-5 rounded-md">
-        <a href="main.html">
-          <i class="fa-solid fa-house" style="color: #ffffff"></i>
-        </a>
+    <div class="flex">
+      <nav class="navBar">
+        <div class="p-5 rounded-md">
+          <a href="main.html">
+            <i class="fa-solid fa-house" style="color: #ffffff"></i>
+          </a>
+        </div>
+        <div class="secondNavDiv rounded-md">
+          <a href="">
+            <img
+              src="../images/liked Icon image.png"
+              alt=""
+              style="height: 55px; width: 55px"
+              class="rounded-md truncate"
+            />
+          </a>
+          <a href="">
+            <img
+              src="../images/aweken my love album cover.png"
+              alt=""
+              style="height: 55px; width: 55px"
+              class="rounded-md truncate"
+            />
+          </a>
+          <a href="">
+            <img
+              src="../images/blond album cover.png"
+              alt=""
+              style="height: 55px; width: 55px"
+              class="rounded-md truncate"
+            />
+          </a>
+        </div>
+      </nav>
+
+      <div class="likedSongsCont text-white rounded-md p-5 w-full">
+        <h1 class="text-white font-bold text-3xl ms-5 mb-5">
+          Recommended songs
+        </h1>
+        <div class="songsInfo grid w-full items-center mb-3">
+          <div class="flex items-center">
+            <p class="ps-3">#</p>
+            <p class="ps-28">Title</p>
+          </div>
+          <p class="justify-self-center">Album</p>
+          <p class="justify-self-end pe-3">Time</p>
+        </div>
+        <hr />
+        <div class="songs mt-10">
+          <!-- contains the songs -->
+        </div>
       </div>
-      <div class="secondNavDiv rounded-md">
-        <a href="">
-          <img
-            src="../images/liked Icon image.png"
-            alt=""
-            style="height: 55px; width: 55px"
-            class="rounded-md truncate"
-          />
-        </a>
-        <a href="">
-          <img
-            src="../images/aweken my love album cover.png"
-            alt=""
-            style="height: 55px; width: 55px"
-            class="rounded-md truncate"
-          />
-        </a>
-        <a href="">
-          <img
-            src="../images/blond album cover.png"
-            alt=""
-            style="height: 55px; width: 55px"
-            class="rounded-md truncate"
-          />
-        </a>
-      </div>
-    </nav>
+    </div>
+
+    <script src="likedSongs.js"></script>
   </body>
 </html>
