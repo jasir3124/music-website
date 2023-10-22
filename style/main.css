@@ -39,27 +39,8 @@
   color: white;
 }
 .songsCont .song .saveIconActive {
-  color: #1ED760;
+  color: #1ed760;
   display: block !important;
 }
 
-.navBar div {
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #121212;
-}
-.navBar div a i {
-  font-size: 25px;
-}
-.navBar .secondNavDiv {
-  padding: 7px;
-  padding-top: 1px;
-  margin-top: 15px;
-}
-.navBar .secondNavDiv img {
-  margin-top: 15px;
-}
-
-.songsCont {
-  margin-left: 10px;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
