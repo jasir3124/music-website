@@ -7,7 +7,7 @@ savedSongs.forEach((song) => {
     song.albumName,
     song.albumCover,
     song.timeLength,
-    song.inedex
+    song.inedex = savedSongs.indexOf(song) + 1
   );
 });
 
