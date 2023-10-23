@@ -1,5 +1,14 @@
-let savedSongs = JSON.parse(localStorage.getItem("songs"));
-console.log(savedSongs);
+let savedSongs = [];
+let songsError = document.querySelector(".songsErrorText");
+let songsStorage = JSON.parse(localStorage.getItem("songs"));
+
+if (songsStorage !== null && songsStorage.length > 0) {
+  savedSongs.push(...songsStorage);
+  songsError.style.display = "none";
+} else {
+  songsError.style.display = "block";
+}
+
 savedSongs.forEach((song) => {
   createSongCard(
     song.name,
@@ -7,7 +16,7 @@ savedSongs.forEach((song) => {
     song.albumName,
     song.albumCover,
     song.timeLength,
-    song.inedex = savedSongs.indexOf(song) + 1
+    (song.inedex = savedSongs.indexOf(song) + 1)
   );
 });
 
