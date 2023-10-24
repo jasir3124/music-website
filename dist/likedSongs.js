@@ -99,7 +99,9 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
     "fa-heart",
     "pt-1.5",
     "pe-10",
-    "saveIcon"
+    "saveIcon",
+    "saveIconActive",
+    "fa-solid"
   );
   // this is appende to the timeAndSaveIconCont
   let timeLength = document.createElement("p");
@@ -119,3 +121,84 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   songCard.appendChild(timeAndSaveIconCont);
   songsCont.appendChild(songCard);
 }
+
+let songCard = document.querySelectorAll(".song");
+songCard.forEach((song) => {
+  // let songNumberCont = song.querySelector(".songNumbercont");
+
+  let songNum = song.querySelector(".songNumber");
+
+  let playIcon = song.querySelector(".songPlayBtn");
+
+  let saveIcon = song.querySelector(".saveIcon");
+
+  song.addEventListener("mouseover", function () {
+    songNum.style.display = "none";
+    playIcon.style.display = "block";
+    saveIcon.style.display = "block";
+  });
+
+  song.addEventListener("mouseout", function () {
+    songNum.style.display = "block";
+    playIcon.style.display = "none";
+    if (saveIcon.classList.contains("saveIconActive")) {
+      return;
+    } else {
+      saveIcon.style.display = "none";
+    }
+  });
+});
+
+let savedSongsArrays = [];
+console.log(savedSongsArrays);
+
+let storage = JSON.parse(localStorage.getItem("songs"));
+if (storage) {
+  savedSongsArrays.push(...storage);
+}
+let saveIcon = document.querySelectorAll(".saveIcon");
+let testObj = {
+  name: "",
+  creator: "",
+  albumName: "",
+  albumCover: "",
+  timeLength: "",
+};
+
+// change saveIcon to active and save song
+saveIcon.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    if (!icon.classList.contains("saveIconActive")) {
+      console.log("true");
+      icon.classList.toggle("saveIconActive");
+      icon.classList.toggle("fa-solid");
+      let song = icon.parentElement.parentElement;
+      let songAuthor = song.firstChild.lastChild.lastChild.textContent;
+      let songTitle = song.firstChild.lastChild.firstChild.textContent;
+      let songAlbumTitle = song.children[1].textContent;
+      let songImg = song.firstChild.children[1].getAttribute("src");
+      let songTimeLength = song.lastChild.lastChild.textContent;
+      testObj.name = songTitle;
+      testObj.creator = songAuthor;
+      testObj.albumName = songAlbumTitle;
+      testObj.albumCover = songImg;
+      testObj.timeLength = songTimeLength;
+      savedSongsArrays.push(Object.assign({}, testObj));
+      localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
+      console.log(savedSongsArrays);
+    } else {
+      icon.classList.remove("saveIconActive", "fa-solid");
+      let song = icon.parentElement.parentElement;
+      let songName = song.firstChild.lastChild.firstChild.textContent;
+      for (let i = 0; i < savedSongsArrays.length; i++) {
+        if (savedSongsArrays[i].name === songName) {
+          savedSongsArrays.splice(i, 1);
+          savedSongsArrays.push();
+          localStorage.setItem("songs", JSON.stringify(savedSongsArrays));
+        }
+      }
+    }
+  });
+});
+
+// localStorage.clear()
