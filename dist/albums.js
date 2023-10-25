@@ -1,92 +1,18 @@
-let welcomeText = document.querySelector(".helloText");
-
-let hour = new Date().getHours();
-if (hour >= 0 && hour < 12) {
-  welcomeText.innerHTML = "Good Morning";
-} else if (hour >= 12 && hour < 20) {
-  welcomeText.innerHTML = "Good Afternoon";
-} else {
-  welcomeText.innerHTML = "Good Evening";
-}
-
-let collectionCardsInfo = [
-  {
-    image: "../images/liked Icon image.png",
-    text: "Liked Songs",
-    href: "likedSongs.html",
-  },
-  {
-    image: "../images/6AM album cover.png",
-    text: "6AM",
-    href: "6amAlbum.html",
-  },
-  {
-    image: "../images/aweken my love album cover.png",
-    text: '"Awaken, My Love"',
-    href: "#",
-  },
-  {
-    image: "../images/blond album cover.png",
-    text: "Blonde",
-    href: "#",
-  },
-  {
-    image: "../images/good kid maad city album cover.png",
-    text: "good kid, m.A.A.d city",
-    href: "#",
-  },
-  {
-    image: "../images/graduation album cover.png",
-    text: "Graduation",
-    href: "#",
-  },
-];
-
-collectionCardsInfo.forEach((element) => {
-  createCollectionCard(element.image, element.text, element.href);
-});
-
-function createCollectionCard(image, text, src) {
-  let collectionCardCont = document.querySelector(".collectionsCont");
-  let collectionCardAnchor = document.createElement("a");
-  collectionCardAnchor.setAttribute("href", src);
-  collectionCardAnchor.setAttribute("class", "m-5");
-  let collectionCard = document.createElement("div");
-  collectionCard.classList.add(
-    "collection",
-    "flex",
-    "items-center",
-    "rounded-md",
-    "truncate"
-  );
-  let collectionImage = document.createElement("img");
-  collectionImage.setAttribute("class", "collectionImage");
-  collectionImage.src = image;
-  let cardTitle = document.createElement("p");
-  cardTitle.classList.add("text-white", "text-xl", "ms-3", "font-semibold");
-  cardTitle.innerHTML = text;
-  collectionCard.appendChild(collectionImage);
-  collectionCard.appendChild(cardTitle);
-  collectionCardAnchor.appendChild(collectionCard);
-  collectionCardCont.appendChild(collectionCardAnchor);
-  return collectionCardCont;
-}
-
-// creates songs
-import songsArray from "../components/songs.js";
+import songsArray from "../components/6amAlbumSongs.js";
 
 songsArray.forEach((song) => {
   createSongCard(
     song.name,
     song.creator,
-    song.albumName,
     song.albumCover,
     song.timeLength,
-    song.inedex
+    song.plays,
+    (song.index = songsArray.indexOf(song) + 1)
   );
 });
 
-function createSongCard(name, creator, albumName1, albumCover, time, index) {
+
+function createSongCard(name, creator, albumCover, time, plays, index) {
   // this contains everything
   let songsCont = document.querySelector(".songs");
 
@@ -130,12 +56,7 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   // this is appended to the songAlbumCoverCont
   let albumCoverPhoto = document.createElement("img");
   albumCoverPhoto.src = albumCover;
-  albumCoverPhoto.alt = "albumCoverPhoto";
-  albumCoverPhoto.style.height = "65px";
-  albumCoverPhoto.style.width = "65px";
-  if (index > 9) {
-    albumCoverPhoto.style.marginLeft = "-10px";
-  }
+  albumCoverPhoto.style.display = "none";
 
   // this is appended to the songAlbumCoverCont
   let albumCoverMoreInfo = document.createElement("div");
@@ -151,9 +72,9 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   creatorName.innerHTML = creator;
 
   // this is appende to the songCard
-  let albumName = document.createElement("p");
-  albumName.classList.add("justify-self-center", "ps-4");
-  albumName.innerHTML = albumName1;
+  let songPlays = document.createElement("p");
+  songPlays.classList.add("justify-self-center", "ps-4");
+  songPlays.innerHTML = plays;
 
   // this is appende to the songCard
   let timeAndSaveIconCont = document.createElement("div");
@@ -182,7 +103,7 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   songAlbumCoverCont.appendChild(albumCoverPhoto);
   songAlbumCoverCont.appendChild(albumCoverMoreInfo);
   songCard.appendChild(songAlbumCoverCont);
-  songCard.appendChild(albumName);
+  songCard.appendChild(songPlays);
   songCard.appendChild(timeAndSaveIconCont);
   songsCont.appendChild(songCard);
 }
@@ -265,7 +186,6 @@ saveIcon.forEach((icon) => {
     }
   });
 });
-// localStorage.clear()
 
 window.addEventListener("load", function () {
   let storage = JSON.parse(localStorage.getItem("songs"));
@@ -278,12 +198,14 @@ window.addEventListener("load", function () {
   let saveIcon = document.querySelectorAll(".saveIcon");
   saveIcon.forEach((icon) => {
     let song = icon.parentElement.parentElement;
-    let songImg = song.firstChild.children[1].getAttribute("src");
+    let songTitle = song.firstChild.lastChild.firstChild.textContent;
     for (let i = 0; i < songsArray.length; i++) {
-      if (songImg === songsArray[i].albumCover) {
+      if (songTitle === songsArray[i].name) {
         icon.classList.add("saveIconActive", "fa-solid");
         icon.style.display = "block";
       }
     }
   });
 });
+
+// localStorage.clear();

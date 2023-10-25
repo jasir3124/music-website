@@ -1,5 +1,4 @@
 .navBar div {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #121212;
 }
@@ -38,9 +37,12 @@
   display: none;
 }
 .songsCont .song .saveIcon {
+  display: none;
   color: white;
 }
 .songsCont .song .saveIconActive {
   color: #1ed760;
   display: block !important;
-}/*# sourceMappingURL=likedSongs.css.map */
+}
+
+/*# sourceMappingURL=albums.css.map */

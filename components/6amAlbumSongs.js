@@ -1,0 +1,88 @@
+let songsArray = [
+  {
+    name: "Puppets",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "8,026,989",
+  },
+  {
+    name: "Heavy",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:00",
+    plays: "4,426,469",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "R.I.P Uncle Holas",
+    creator: "Lil 2z, Trapboy Freddy",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "1:59",
+    plays: "1,049,511",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+  {
+    name: "2z Don Corleon",
+    creator: "Lil 2z",
+    albumCover: "../images/6AM album cover.png",
+    timeLength: "2:18",
+    plays: "33,579,096",
+  },
+];
+
+export default songsArray;
