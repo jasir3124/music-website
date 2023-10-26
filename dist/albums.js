@@ -1,16 +1,31 @@
-import songsArray from "../components/6amAlbumSongs.js";
+import album6AM from "../components/6amAlbumSongs.js";
+import albumGraduation from "../components/graduationAlbumSongs.js";
 
-songsArray.forEach((song) => {
-  createSongCard(
-    song.name,
-    song.creator,
-    song.albumCover,
-    song.timeLength,
-    song.plays,
-    (song.index = songsArray.indexOf(song) + 1)
-  );
-});
+const currentUrl = document.URL;
 
+if (currentUrl == "http://127.0.0.1:5500/dist/6amAlbum.html") {
+  album6AM.forEach((song) => {
+    createSongCard(
+      song.name,
+      song.creator,
+      song.albumCover,
+      song.timeLength,
+      song.plays,
+      (song.index = album6AM.indexOf(song) + 1)
+    );
+  });
+} else if (currentUrl == "http://127.0.0.1:5500/dist/graduationAlbum.html") {
+  albumGraduation.forEach((song) => {
+    createSongCard(
+      song.name,
+      song.creator,
+      song.albumCover,
+      song.timeLength,
+      song.plays,
+      (song.index = albumGraduation.indexOf(song) + 1)
+    );
+  });
+}
 
 function createSongCard(name, creator, albumCover, time, plays, index) {
   // this contains everything
@@ -60,6 +75,9 @@ function createSongCard(name, creator, albumCover, time, plays, index) {
 
   // this is appended to the songAlbumCoverCont
   let albumCoverMoreInfo = document.createElement("div");
+  if (index > 9) {
+    albumCoverMoreInfo.style.marginLeft = "-11px";
+  }
 
   // this is appended to the albumCoverMoreInfo
   let songName = document.createElement("p");
@@ -148,7 +166,7 @@ let testObj = {
   creator: "",
   albumName: "",
   albumCover: "",
-  timeLength: ""
+  timeLength: "",
 };
 
 // change saveIcon to active and save song

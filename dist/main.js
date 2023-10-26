@@ -38,7 +38,7 @@ let collectionCardsInfo = [
   {
     image: "../images/graduation album cover.png",
     text: "Graduation",
-    href: "#",
+    href: "graduationAlbum.html",
   },
 ];
 
