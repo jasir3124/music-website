@@ -1,50 +1,55 @@
 .navBar {
-    div {
-      width: fit-content;
-      background-color: #121212;
-      a {
-        i {
-          font-size: 25px;
-        }
-      }
-    }
-    .secondNavDiv {
-      padding: 7px;
-      padding-top: 1px;
-      margin-top: 15px;
-      img {
-        margin-top: 15px;
-      }
-    }
-  }
-
-  .songsCont {
+  div {
+    width: fit-content;
     background-color: #121212;
-    margin-left: 30px;
-    margin-right: 30px;
-    .songsInfo {
-      grid-template-columns: 33% 33% 33%;
-    }
-    .song {
-      grid-template-columns: 33% 33% 33%;
-      .songNumbercont {
-        position: relative;
-        left: -6px;
-        margin-left: 10px;
-        .songNumber {
-          margin-right: 1.3px;
-        }
-        .songPlayBtn {
-          display: none;
-        }
-      }
-      .saveIcon {
-        display: none;
-        color: white;
-      }
-      .saveIconActive {
-        color: #1ed760;
-        display: block !important;
+    a {
+      i {
+        font-size: 25px;
       }
     }
   }
+  .secondNavDiv {
+    padding: 7px;
+    padding-top: 1px;
+    margin-top: 15px;
+    img {
+      margin-top: 15px;
+    }
+  }
+}
+
+.songsCont {
+  background-color: #121212;
+  margin-left: 30px;
+  margin-right: 30px;
+  .songsInfo {
+    grid-template-columns: 33% 33% 33%;
+  }
+  .song {
+    grid-template-columns: 33% 33% 33%;
+    .songNumbercont {
+      position: relative;
+      left: -6px;
+      margin-left: 10px;
+      .songNumber {
+        margin-right: 1.3px;
+      }
+      .songPlayBtn {
+        display: none;
+      }
+    }
+    .saveIcon {
+      display: none;
+      color: white;
+    }
+    .saveIconActive {
+      color: #1ed760;
+      display: block !important;
+    }
+  }
+}
+.album6Am{
+  box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
+  -webkit-box-shadow: 0px 180px 100px -50px rgba(221, 46, 46, 0.75) inset;
+  -moz-box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
+}

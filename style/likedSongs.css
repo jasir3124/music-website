@@ -1,5 +1,4 @@
 .navBar div {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #121212;
 }
@@ -19,6 +18,9 @@
   background-color: #121212;
   margin-left: 30px;
   margin-right: 30px;
+  box-shadow: 0px 117px 137px -50px #5641A9 inset;
+  -webkit-box-shadow: 0px 180px 100px -50px #5641A9 inset;
+  -moz-box-shadow: 0px 117px 137px -50px #5641A9 inset;
 }
 .songsCont .songsInfo {
   grid-template-columns: 33% 33% 33%;
@@ -43,4 +45,6 @@
 .songsCont .song .saveIconActive {
   color: #1ed760;
   display: block !important;
-}/*# sourceMappingURL=likedSongs.css.map */
+}
+
+/*# sourceMappingURL=likedSongs.css.map */

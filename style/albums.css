@@ -45,4 +45,10 @@
   display: block !important;
 }
 
+.album6Am {
+  box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
+  -webkit-box-shadow: 0px 180px 100px -50px rgba(221, 46, 46, 0.75) inset;
+  -moz-box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
+}
+
 /*# sourceMappingURL=albums.css.map */
