@@ -37,8 +37,11 @@
 .songsCont .song .saveIcon {
   display: none;
   color: white;
+  cursor: pointer;
 }
 .songsCont .song .saveIconActive {
   color: #1ed760;
   display: block !important;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

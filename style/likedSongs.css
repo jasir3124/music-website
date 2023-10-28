@@ -40,6 +40,7 @@
   display: none;
 }
 .songsCont .song .saveIcon {
+  cursor: pointer;
   color: white;
 }
 .songsCont .song .saveIconActive {

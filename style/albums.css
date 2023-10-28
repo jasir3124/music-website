@@ -39,6 +39,7 @@
 .songsCont .song .saveIcon {
   display: none;
   color: white;
+  cursor: pointer;
 }
 .songsCont .song .saveIconActive {
   color: #1ed760;
@@ -49,6 +50,12 @@
   box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
   -webkit-box-shadow: 0px 180px 100px -50px rgba(221, 46, 46, 0.75) inset;
   -moz-box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
+}
+
+.albumGraduation {
+  box-shadow: 0px 117px 137px -50px #853081 inset;
+  -webkit-box-shadow: 0px 180px 100px -50px #853081 inset;
+  -moz-box-shadow: 0px 117px 137px -50px #853081 inset;
 }
 
 /*# sourceMappingURL=albums.css.map */
