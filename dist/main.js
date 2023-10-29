@@ -23,7 +23,7 @@ let collectionCardsInfo = [
   {
     image: "../images/aweken my love album cover.png",
     text: '"Awaken, My Love"',
-    href: "#",
+    href: "awekenMyLoveAlbum.html",
   },
   {
     image: "../images/blond album cover.png",

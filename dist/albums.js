@@ -1,31 +1,33 @@
 import album6AM from "../components/6amAlbumSongs.js";
 import albumGraduation from "../components/graduationAlbumSongs.js";
+import albumAwakenMyLove from "../components/awakenMyLoveAlbumSongs.js";
 
 const currentUrl = document.URL;
 
-if (currentUrl == "http://127.0.0.1:5500/dist/6amAlbum.html") {
-  album6AM.forEach((song) => {
-    createSongCard(
-      song.name,
-      song.creator,
-      song.albumCover,
-      song.timeLength,
-      song.plays,
-      (song.index = album6AM.indexOf(song) + 1)
-    );
-  });
-} else if (currentUrl == "http://127.0.0.1:5500/dist/graduationAlbum.html") {
-  albumGraduation.forEach((song) => {
-    createSongCard(
-      song.name,
-      song.creator,
-      song.albumCover,
-      song.timeLength,
-      song.plays,
-      (song.index = albumGraduation.indexOf(song) + 1)
-    );
-  });
+let albumSongs;
+
+let searchPath6AM = "dist/6amAlbum.html";
+let searchPathGraduation = "dist/graduationAlbum.html";
+let searchPathAwakenMyLove = "dist/awekenMyLoveAlbum.html"
+
+if (currentUrl.indexOf(searchPath6AM) !== -1) {
+  albumSongs = album6AM
+} else if (currentUrl.indexOf(searchPathGraduation) !== -1) {
+  albumSongs = albumGraduation  
+} else if (currentUrl.indexOf(searchPathAwakenMyLove) !== -1) {
+  albumSongs = albumAwakenMyLove
 }
+
+albumSongs.forEach((song) => {
+  createSongCard(
+    song.name,
+    song.creator,
+    song.albumCover,
+    song.timeLength,
+    song.plays,
+    (song.index = albumSongs.indexOf(song) + 1)
+  );
+});
 
 function createSongCard(name, creator, albumCover, time, plays, index) {
   // this contains everything
