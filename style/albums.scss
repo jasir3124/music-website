@@ -22,6 +22,13 @@
   background-color: #121212;
   margin-left: 30px;
   margin-right: 30px;
+  div {
+    img {
+      box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
   .songsInfo {
     grid-template-columns: 33% 33% 33%;
   }
@@ -49,18 +56,23 @@
     }
   }
 }
-.album6Am{
+.album6Am {
   box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
   -webkit-box-shadow: 0px 180px 100px -50px rgba(221, 46, 46, 0.75) inset;
   -moz-box-shadow: 0px 117px 137px -50px rgba(221, 46, 46, 0.75) inset;
 }
-.albumGraduation{
-  box-shadow: 0px 117px 137px -50px #AD497F inset;
-  -webkit-box-shadow: 0px 180px 100px -50px #AD497F inset;
-  -moz-box-shadow: 0px 117px 137px -50px #AD497F inset;
+.albumGraduation {
+  box-shadow: 0px 117px 137px -50px #ad497f inset;
+  -webkit-box-shadow: 0px 180px 100px -50px #ad497f inset;
+  -moz-box-shadow: 0px 117px 137px -50px #ad497f inset;
 }
-.awekenMyLoveAlbum{
-  box-shadow: 0px 117px 137px -50px #35B8E6 inset;
-  -webkit-box-shadow: 0px 180px 100px -50px #35B8E6 inset;
-  -moz-box-shadow: 0px 117px 137px -50px #35B8E6 inset;
+.awekenMyLoveAlbum {
+  box-shadow: 0px 117px 137px -50px #35b8e6 inset;
+  -webkit-box-shadow: 0px 180px 100px -50px #35b8e6 inset;
+  -moz-box-shadow: 0px 117px 137px -50px #35b8e6 inset;
+}
+.albumBlonde {
+  box-shadow: 0px 117px 137px -50px white inset;
+  -webkit-box-shadow: 0px 180px 100px -50px white inset;
+  -moz-box-shadow: 0px 117px 137px -50px white inset;
 }

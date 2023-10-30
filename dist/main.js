@@ -28,7 +28,7 @@ let collectionCardsInfo = [
   {
     image: "../images/blond album cover.png",
     text: "Blonde",
-    href: "#",
+    href: "blondeAlbum.html",
   },
   {
     image: "../images/good kid maad city album cover.png",
