@@ -2,6 +2,7 @@ import album6AM from "../components/6amAlbumSongs.js";
 import albumGraduation from "../components/graduationAlbumSongs.js";
 import albumAwakenMyLove from "../components/awakenMyLoveAlbumSongs.js";
 import albumBlonde from "../components/blondeAlbumSongs.js"
+import albumGkmc from "../components/gkmcAlbumSongs.js"
 
 const currentUrl = document.URL;
 console.log(currentUrl);
@@ -11,6 +12,7 @@ let searchPath6AM = "dist/6amAlbum.html";
 let searchPathGraduation = "dist/graduationAlbum.html";
 let searchPathAwakenMyLove = "dist/awekenMyLoveAlbum.html"
 let searshPathBlonde = "dist/blondeAlbum.html";
+let searchPathGkmc = "dist/gkmcAlbum.html"
 
 if (currentUrl.indexOf(searchPath6AM) !== -1) {
   albumSongs = album6AM
@@ -20,6 +22,8 @@ if (currentUrl.indexOf(searchPath6AM) !== -1) {
   albumSongs = albumAwakenMyLove
 } else if (currentUrl.indexOf(searshPathBlonde) !== -1){
   albumSongs = albumBlonde
+} else if (currentUrl.indexOf(searchPathGkmc) !== -1){
+  albumSongs = albumGkmc
 }
 
 albumSongs.forEach((song) => {
