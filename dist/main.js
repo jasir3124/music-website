@@ -90,6 +90,9 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   // this contains everything
   let songsCont = document.querySelector(".songs");
 
+  let songLink = document.createElement("a");
+  songLink.href = '#'
+
   // this is the card thats appended to the songsCont
   let songCard = document.createElement("div");
   songCard.classList.add(
@@ -184,7 +187,8 @@ function createSongCard(name, creator, albumName1, albumCover, time, index) {
   songCard.appendChild(songAlbumCoverCont);
   songCard.appendChild(albumName);
   songCard.appendChild(timeAndSaveIconCont);
-  songsCont.appendChild(songCard);
+  songLink.appendChild(songCard);
+  songsCont.appendChild(songLink);
 }
 
 let songCard = document.querySelectorAll(".song");
