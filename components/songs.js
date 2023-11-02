@@ -6,6 +6,7 @@ let songsArray = [
     albumCover: "../images/good kid maad city album cover.png",
     timeLength: "5:10",
     inedex: "1",
+    link: "https://open.spotify.com/track/0yhMmqax6HRAZxI7udEask?si=4b374b46646a4e52",
   },
   {
     name: "Me and Your Mama",
@@ -14,6 +15,7 @@ let songsArray = [
     albumCover: "../images/aweken my love album cover.png",
     timeLength: "6:19",
     inedex: "2",
+    link: "https://open.spotify.com/track/4AFsRbaLKRWo3dDtjDFA2V?si=6320aacaf4d346c5",
   },
   {
     name: "Pink + White",
@@ -22,6 +24,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "6:19",
     inedex: "3",
+    link: "https://open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8?si=acfa9918f3ca4045",
   },
   {
     name: "Homecoming",
@@ -30,6 +33,7 @@ let songsArray = [
     albumCover: "../images/graduation album cover.png",
     timeLength: "3:23",
     inedex: "4",
+    link: "https://open.spotify.com/track/4iz9lGMjU1lXS51oPmUmTe?si=74c5779bee5b462d",
   },
   {
     name: "2z Don Corleon",
@@ -38,6 +42,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "1:57",
     inedex: "5",
+    link: "https://open.spotify.com/track/44xttcHOwxaQDVUOJO0vFe?si=6045ae8583e542fb",
   },
   {
     name: "Father Stretch My Hands Pt. 1",
@@ -46,6 +51,7 @@ let songsArray = [
     albumCover: "../images/the life of pablo album cover.png",
     timeLength: "2:15",
     inedex: "6",
+    link: "https://open.spotify.com/track/4KW1lqgSr8TKrvBII0Brf8?si=42b288b131954ee7",
   },
   {
     name: "Mary",
@@ -54,6 +60,7 @@ let songsArray = [
     albumCover: "../images/trick album cover.png",
     timeLength: "3:17",
     inedex: "7",
+    link: "https://open.spotify.com/track/36TbBJ7mLPOZMAYs0p4mxb?si=4360522fcbeb470e",
   },
   {
     name: "Trance(with Travis Scott & Young Thug)",
@@ -62,6 +69,7 @@ let songsArray = [
     albumCover: "../images/heroes and villains album cover.png",
     timeLength: "3:14",
     inedex: "8",
+    link: "https://open.spotify.com/track/5wG3HvLhF6Y5KTGlK0IW3J?si=855bc4acb27042fa",
   },
   {
     name: "Smack That",
@@ -70,6 +78,7 @@ let songsArray = [
     albumCover: "../images/konvicted album cover.png",
     timeLength: "3:32",
     inedex: "9",
+    link: "https://open.spotify.com/track/2kQuhkFX7uSVepCD3h29g5?si=356f15bf611f4d24",
   },
   {
     name: "Runnin",
@@ -78,6 +87,7 @@ let songsArray = [
     albumCover: "../images/savage mode 2 album cover.png",
     timeLength: "3:15",
     inedex: "10",
+    link: "https://open.spotify.com/track/5SWnsxjhdcEDc7LJjq9UHk?si=dd0d9cd0f1cd421f",
   },
 ];
 

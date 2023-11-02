@@ -82,16 +82,18 @@ songsArray.forEach((song) => {
     song.albumName,
     song.albumCover,
     song.timeLength,
-    song.inedex
+    song.inedex,
+    song.link
   );
 });
 
-function createSongCard(name, creator, albumName1, albumCover, time, index) {
+function createSongCard(name, creator, albumName1, albumCover, time, index, link) {
   // this contains everything
   let songsCont = document.querySelector(".songs");
 
   let songLink = document.createElement("a");
-  songLink.href = '#'
+  songLink.href = link
+  songLink.setAttribute("target", "_blank");
 
   // this is the card thats appended to the songsCont
   let songCard = document.createElement("div");
