@@ -5,6 +5,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:18",
     plays: "8,026,989",
+    link: "https://open.spotify.com/track/4GAGO1TrW98HWcasbVKmil?si=012d21152e41481e",
   },
   {
     name: "Heavy",
@@ -12,6 +13,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:00",
     plays: "4,426,469",
+    link: "https://open.spotify.com/track/0rEQqSxfB2St2h8F6wKkiy?si=e54310db368947dd",
   },
   {
     name: "2z Don Corleon",
@@ -19,6 +21,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:18",
     plays: "33,579,096",
+    link: "https://open.spotify.com/track/44xttcHOwxaQDVUOJO0vFe?si=2de00719de934fa6",
   },
   {
     name: "R.I.P Uncle Holas",
@@ -26,6 +29,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "1:59",
     plays: "1,049,511",
+    link: "https://open.spotify.com/track/5e4eH672w2nNJLI9DTHy2d?si=000d8023e961429d",
   },
   {
     name: "On my own",
@@ -33,6 +37,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:08",
     plays: "8,476,750",
+    link: "https://open.spotify.com/track/4EDOm38vvFlr68hbCK4Dtu?si=df4467621fb64c9f",
   },
   {
     name: "Deep end",
@@ -40,6 +45,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:10",
     plays: "630,488",
+    link: "https://open.spotify.com/track/7A7IPw25jakBTxAPyAzVv8?si=f879fa94bdf14db6",
   },
   {
     name: "Ceremony",
@@ -47,6 +53,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:10",
     plays: "627,260",
+    link: "https://open.spotify.com/track/6SyQ1DI6CkUTjjF9tgJYQf?si=126d6b3373f24d39",
   },
   {
     name: "Vacation",
@@ -54,6 +61,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:09",
     plays: "566,728",
+    link: "https://open.spotify.com/track/422hBxnxwX1rVar5nkKKbp?si=2c148091d6cd4894",
   },
   {
     name: "Live Slow, Die Fast",
@@ -61,6 +69,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "3:26",
     plays: "830,100",
+    link: "https://open.spotify.com/track/5gxFVRyHFmcAa0jsCRI8Nl?si=596fd190c48f4373",
   },
   {
     name: "Better off",
@@ -68,6 +77,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:48",
     plays: "780,803",
+    link: "https://open.spotify.com/track/1NQTW1aohaLwCrx0g7LfbW?si=2be4947d4ea44b75",
   },
   {
     name: "Jurassic",
@@ -75,6 +85,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2:21",
     plays: "707,083",
+    link: "https://open.spotify.com/track/5hzMK0X2NTytkMMhdjOaCN?si=0b6001e263314853",
   },
   {
     name: "Saving Grace",
@@ -82,6 +93,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "3:33",
     plays: "483,763",
+    link: "https://open.spotify.com/track/21ZBjUDIizRRxGdv8ZIXpB?si=127b4234d2c34aa9",
   },
   {
     name: "Tell us Apart",
@@ -89,6 +101,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "2,21",
     plays: "956,542",
+    link: "https://open.spotify.com/track/1HIg51dfRAK2jbBM2qVoWk?si=7369100e62ae4376",
   },
   {
     name: "Misunderstood",
@@ -96,6 +109,7 @@ let songsArray = [
     albumCover: "../images/6AM album cover.png",
     timeLength: "1:58",
     plays: "480,671",
+    link: "https://open.spotify.com/track/6zQXqdwEqejEtX6EDq7mBm?si=d0cbdbac21664dba",
   },
 ];
 

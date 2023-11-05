@@ -33,14 +33,19 @@ albumSongs.forEach((song) => {
     song.albumCover,
     song.timeLength,
     song.plays,
-    (song.index = albumSongs.indexOf(song) + 1)
+    (song.index = albumSongs.indexOf(song) + 1),
+    song.link
   );
 });
 
-function createSongCard(name, creator, albumCover, time, plays, index) {
+function createSongCard(name, creator, albumCover, time, plays, index, link) {
   // this contains everything
   let songsCont = document.querySelector(".songs");
 
+  let songLink = document.createElement("a");
+  songLink.href = link
+  songLink.setAttribute('target', '_blank');
+  
   // this is the card thats appended to the songsCont
   let songCard = document.createElement("div");
   songCard.classList.add(
@@ -133,7 +138,8 @@ function createSongCard(name, creator, albumCover, time, plays, index) {
   songCard.appendChild(songAlbumCoverCont);
   songCard.appendChild(songPlays);
   songCard.appendChild(timeAndSaveIconCont);
-  songsCont.appendChild(songCard);
+  songLink.appendChild(songCard);
+  songsCont.appendChild(songLink);
 }
 
 let songCard = document.querySelectorAll(".song");

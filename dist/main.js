@@ -87,13 +87,17 @@ songsArray.forEach((song) => {
   );
 });
 
-function createSongCard(name, creator, albumName1, albumCover, time, index, link) {
+function createSongCard(
+  name,
+  creator,
+  albumName1,
+  albumCover,
+  time,
+  index,
+  link
+) {
   // this contains everything
   let songsCont = document.querySelector(".songs");
-
-  let songLink = document.createElement("a");
-  songLink.href = link
-  songLink.setAttribute("target", "_blank");
 
   // this is the card thats appended to the songsCont
   let songCard = document.createElement("div");
@@ -123,6 +127,11 @@ function createSongCard(name, creator, albumName1, albumCover, time, index, link
   let songNumber = document.createElement("p");
   songNumber.classList.add("text-xl", "text-gray-400", "songNumber");
   songNumber.innerHTML = index;
+
+  // play icon cont
+  let songLink = document.createElement("a");
+  songLink.href = link;
+  songLink.setAttribute("target", "_blank");
 
   // this is the play button that shows when you hover over the song it is appended to the songNumberCont
   let playIcon = document.createElement("i");
@@ -182,15 +191,15 @@ function createSongCard(name, creator, albumName1, albumCover, time, index, link
   albumCoverMoreInfo.appendChild(songName),
     albumCoverMoreInfo.appendChild(creatorName),
     songNumberCont.appendChild(songNumber);
-  songNumberCont.appendChild(playIcon);
+  songLink.appendChild(playIcon);
+  songNumberCont.appendChild(songLink);
   songAlbumCoverCont.appendChild(songNumberCont);
   songAlbumCoverCont.appendChild(albumCoverPhoto);
   songAlbumCoverCont.appendChild(albumCoverMoreInfo);
   songCard.appendChild(songAlbumCoverCont);
   songCard.appendChild(albumName);
   songCard.appendChild(timeAndSaveIconCont);
-  songLink.appendChild(songCard);
-  songsCont.appendChild(songLink);
+  songsCont.appendChild(songCard);
 }
 
 let songCard = document.querySelectorAll(".song");
@@ -233,7 +242,7 @@ let testObj = {
   creator: "",
   albumName: "",
   albumCover: "",
-  timeLength: ""
+  timeLength: "",
 };
 
 // change saveIcon to active and save song
@@ -249,6 +258,8 @@ saveIcon.forEach((icon) => {
       let songAlbumTitle = song.children[1].textContent;
       let songImg = song.firstChild.children[1].getAttribute("src");
       let songTimeLength = song.lastChild.lastChild.textContent;
+      let songLink = song.firstChild.firstChild.firstChild;
+      console.log(songLink);
       testObj.name = songTitle;
       testObj.creator = songAuthor;
       testObj.albumName = songAlbumTitle;
