@@ -5,6 +5,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "5:14",
     plays: "286,482,327",
+    link: "https://open.spotify.com/track/19YKaevk2bce4odJkP5L22?si=30d0dc77a2cb47e6",
   },
   {
     name: "Ivy",
@@ -12,6 +13,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "4:09",
     plays: "645,358,327",
+    link: "https://open.spotify.com/track/2ZWlPOoWh0626oTaHrnl2a?si=aca1dd060bc74992",
   },
   {
     name: "Pink + White",
@@ -19,6 +21,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "3:04",
     plays: "941,989,830",
+    link: "https://open.spotify.com/track/3xKsf9qdS1CyvXSMEid6g8?si=7e142fe4d04248ae",
   },
   {
     name: "Be Yourself",
@@ -26,6 +29,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "1:26",
     plays: "68,001,989",
+    link: "https://open.spotify.com/track/1IdZvb2XK8NmsovQlV6CPn?si=0ac45617b3e64f8c",
   },
   {
     name: "Solo",
@@ -33,6 +37,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "4:17",
     plays: "199,481,515",
+    link: "https://open.spotify.com/track/35xSkNIXi504fcEwz9USRB?si=1fe7c40b518c4c60",
   },
   {
     name: "Skyline To",
@@ -40,6 +45,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "3:04",
     plays: "95,076,123",
+    link: "https://open.spotify.com/track/4xR3MAscflQ262kMeiKshQ?si=2d7b3248152b4f80",
   },
   {
     name: "Self Controle",
@@ -47,6 +53,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "4:09",
     plays: "377,444,024",
+    link: "https://open.spotify.com/track/5GUYJTQap5F3RDQiCOJhrS?si=ae5f5baef11448bc",
   },
   {
     name: "Good Guy",
@@ -54,6 +61,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "1:09",
     plays: "88,658,636",
+    link: "https://open.spotify.com/track/2JUqYobT8NvARdPmc4ES2x?si=d7238b46c2de412b",
   },
   {
     name: "Nights",
@@ -61,6 +69,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "5:07",
     plays: "627,564,919",
+    link: "https://open.spotify.com/track/7eqoqGkKwgOaWNNHx90uEZ?si=82a47da8d0c44698",
   },
   {
     name: "Solo(Reprise)",
@@ -68,6 +77,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "1:18",
     plays: "72,559,361",
+    link: "https://open.spotify.com/track/2qtoRFCOEL1gRn5q9DJC7F?si=62353eb806f14f02",
   },
   {
     name: "Pretty Sweet",
@@ -75,6 +85,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "2:38",
     plays: "61,437,675",
+    link: "https://open.spotify.com/track/17yrCsl1Ai6CZLBmGj6d6p?si=c5b2248d2bc24639",
   },
   {
     name: "Facebook Story",
@@ -82,6 +93,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "1:08",
     plays: "48,486,981",
+    link: "https://open.spotify.com/track/73D5hBkiVZkopZrmBZTBWf?si=e99e3f8cd41a4549",
   },
   {
     name: "Close To You",
@@ -89,6 +101,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "1:25",
     plays: "90,183,754",
+    link: "https://open.spotify.com/track/1VZLEW5ZfcAbKZ94XQiSZF?si=f28551d5ec4c4721",
   },
   {
     name: "White Ferrari",
@@ -96,6 +109,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "4:08",
     plays: "397,691,592",
+    link: "https://open.spotify.com/track/2LMkwUfqC6S6s6qDVlEuzV?si=686fba6c769f4af8",
   },
   {
     name: "Seigried",
@@ -103,6 +117,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "5:34",
     plays: "131,596,380",
+    link: "https://open.spotify.com/track/1BViPjTT585XAhkUUrkts0?si=6f1769c99020431a",
   },
   {
     name: "Godspeed",
@@ -110,6 +125,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "2:57",
     plays: "315,238,932",
+    link: "https://open.spotify.com/track/34xTFwjPQ1dC6uJmleno7x?si=bc93356cb6d04cab",
   },
   {
     name: "Futura Free",
@@ -117,6 +133,7 @@ let songsArray = [
     albumCover: "../images/blond album cover.png",
     timeLength: "9:24",
     plays: "71,904,763",
+    link: "https://open.spotify.com/track/5k8LB57xOq8UUNVaKWSqrf?si=cf99642521724a3d",
   },
 ];
 
